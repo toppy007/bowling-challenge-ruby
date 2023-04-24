@@ -15,11 +15,11 @@ class ScoreCard
     end
 
     def print_total_score
-        return @score_card
+        @score_card
     end
 
     def frames_counter
-        return true if @frames == 10
+        return false if @frames == 10
         @frames += 1
     end
 end

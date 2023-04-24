@@ -3,7 +3,7 @@ class ScoreTotal
     def initialize
         @total_score = []
     end
-
+    
     def strike_score(score_card)
         score_card.each.with_index do | frame, index |
             if frame.length == 1 

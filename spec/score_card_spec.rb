@@ -51,4 +51,23 @@ RSpec.describe ScoreCard do
             expect(repo.print_total_score).to eq [[5, 5], [10]] # Frame 1 & Frame 2
         end
     end
+
+    context 'Keeps a check of the current frame' do
+        it 'returns frame true' do
+            repo = ScoreCard.new
+
+            repo.frames_counter
+            repo.frames_counter
+            repo.frames_counter
+            repo.frames_counter
+            repo.frames_counter
+            repo.frames_counter
+            repo.frames_counter
+            repo.frames_counter
+            repo.frames_counter
+            repo.frames_counter
+
+            expect(repo.frames_counter).to eq false 
+        end
+    end
 end
